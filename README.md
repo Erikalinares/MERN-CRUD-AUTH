@@ -10,8 +10,7 @@ me falta mucho por implementar y terminar, estoy con muchos errores 😎😎😁
 
 
   
-## Depencias 
-
+## Dependencias utilizadas 
 1. express
 2. packahge.json
 3. morgan (permite visualizar las peticiones que van llegando al backend)
