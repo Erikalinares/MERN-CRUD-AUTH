@@ -3,6 +3,12 @@ Esta es una aplicacion de seguridad de mejora en la seguridad del envío del for
 
 # Santi y Gon
 me falta mucho por implementar y terminar, estoy con muchos errores 😎😎😁
+
+## Tecnologias
+![image](https://github.com/Erikalinares/MERN-CRUD-AUTH/assets/129747309/5d6a70b4-1cd4-4137-872d-a272a0b6c4c5) ![image](https://github.com/Erikalinares/MERN-CRUD-AUTH/assets/129747309/2904c118-9c2c-4257-9b8c-77142ef36225)   ![image](https://github.com/Erikalinares/MERN-CRUD-AUTH/assets/129747309/dddec072-222c-4439-8033-ddc55932af35)
+
+
+
   
 ## Depencias 
 
