@@ -18,7 +18,7 @@ me falta mucho por implementar y terminar, estoy con muchos errores 😎😎😁
 5. jsonwebtoken 
 6. cookie-parser (nos permite añadir middlewares)
 7. express.validator (valida los datos que van llegando )
-8. zod (validar esquemas)
+8. zod (nos permite crear esquemas, permite validar los datos antes de que lleguen al backend)
 9. tailwind para los estilos
 
 
