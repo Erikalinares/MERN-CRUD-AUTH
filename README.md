@@ -1,5 +1,5 @@
 # MERN-CRUD-AUTH
-Esta es una aplicacion de seguridad de mejora en la seguridad del envío del formulario. Deberá contener un formulario de acceso público, la misma deberá contar con un perfil de administrador y otro de usuario. Estos últimos, serán los únicos que podrán loguearse en la plataforma. 
+Esta es una aplicacion  de mejora en la seguridad del envío del formulario. Deberá contener un formulario de acceso público, deberá contar con un perfil de administrador y otro de usuario. Estos últimos, serán los únicos que podrán loguearse en la plataforma. 
 
 # Santi y Gon
 me falta mucho por implementar y terminar, estoy con muchos errores 😎😎😁
@@ -13,7 +13,7 @@ me falta mucho por implementar y terminar, estoy con muchos errores 😎😎😁
 ## Dependencias utilizadas 
 1. express
 2. packahge.json
-3. morgan (permite visualizar las peticiones que van llegando al backend)
+3. morgan (permite visualizar por consola  las peticiones que van llegando al backend)
 4. bcryptjs ( nos da un metodo que se llama hash y convierte un string en una serie de caracteres aleatorios)
 5. jsonwebtoken 
 6. cookie-parser (nos permite añadir middlewares)
