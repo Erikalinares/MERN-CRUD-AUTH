@@ -23,7 +23,7 @@ function RegisterPage() {
 
   return (
     <div className='h-[calc(100vh-100px)] flex items-center justify-center'>
-    <div className='bg-zinc-800 max-w-md p-10 rounded-md'>
+    <div className='bg-zinc-400 max-w-md p-10 rounded-md'>
         {
             registerErrors.map((error,i) => (
                 <div className='bg-red-500 p2 text-white' key= {i}>
@@ -34,7 +34,7 @@ function RegisterPage() {
 
         <form onSubmit={onSubmit}>
             <input type="text" {...register ('username', {required: true})}
-                className='w-full bg-zinc-700 text-white px 4 py-2 rounded-md my-2'
+                className='w-full bg-zinc-300 text-white px 4 py-2 rounded-md my-2'
                 placeholder='Username'/>
             {
                 errors.username && (
@@ -42,7 +42,7 @@ function RegisterPage() {
                 )
             }
             <input type="email" {...register ('email', {required: true})}
-                className='w-full bg-zinc-700 text-white px 4 py-2 rounded-md my-2'
+                className='w-full bg-zinc-300 text-white px 4 py-2 rounded-md my-2'
                 placeholder='Email'/>
             {
                 errors.email && (
@@ -50,7 +50,7 @@ function RegisterPage() {
                 )
             }
             <input type="password" {...register ('password', {required: true})}
-                className='w-full bg-zinc-700 text-white px 4 py-2 rounded-md my-2'
+                className='w-full bg-zinc-300 text-white px 4 py-2 rounded-md my-2'
                 placeholder='password'/>
             {
                 errors.password && (
@@ -63,7 +63,7 @@ function RegisterPage() {
             </button>
         </form>
         <p className="flex gap-x-2 justify-between">
-          Already have an account?{''} <Link to="/login" className="text-sky-500">Login</Link>
+          Already have an account?{''} <Link to="/login" className="text-sky-900">Login</Link>
         </p>
     </div>
     </div>

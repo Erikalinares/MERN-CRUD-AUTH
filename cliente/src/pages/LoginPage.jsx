@@ -19,7 +19,7 @@ const {
 
   return (
     <div className='h-[calc(100vh-100px)] flex items-center justify-center'>
-      <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
+      <div className='bg-zinc-400 max-w-md w-full p-10 rounded-md'>
         {signinErrors.map((error,i) => (
                 <div className='bg-red-500 p2 text-white text-center my-2' key= {i}>
                     {error}
@@ -30,7 +30,7 @@ const {
 
       <form onSubmit={onSubmit}>
               <input type="email" {...register ('email', {required: true})}
-                className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
+                className='w-full bg-zinc-300 text-white px-4 py-2 rounded-md my-2'
                 placeholder='Email'/>
             {
                 errors.email && (
@@ -38,7 +38,7 @@ const {
                 )
             }
             <input type="password" {...register ('password', {required: true})}
-                className='w-full bg-zinc-700 text-white px 4 py-2 rounded-md my-2'
+                className='w-full bg-zinc-300 text-white px 4 py-2 rounded-md my-2'
                 placeholder='password'/>
             {
                 errors.password && (
@@ -52,7 +52,7 @@ const {
 
         </form>
         <p className="flex gap-x-2 justify-between">
-          Don't have an account? <Link to="/register" className="text-sky-500">Sign up</Link>
+          Don't have an account? <Link to="/register" className="text-sky-900">Sign up</Link>
         </p>
           
       </div>
