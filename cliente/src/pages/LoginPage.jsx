@@ -14,7 +14,7 @@ const {
        const {signin, errors: signinErrors }= useAuth();
       const onSubmit = handleSubmit ((data) => {
         console.log(data);
-  signin(data);
+      signin(data);
 });
 
   return (
