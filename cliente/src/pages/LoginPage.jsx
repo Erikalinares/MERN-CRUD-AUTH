@@ -11,7 +11,7 @@ const {
         formState: { errors },
        } = useForm();
 
-       const {signin, errors: signinErrors }= useAuth();
+      const {signin, errors: signinErrors }= useAuth();
       const onSubmit = handleSubmit ((data) => {
         console.log(data);
       signin(data);
@@ -21,9 +21,9 @@ const {
     <div className='h-[calc(100vh-100px)] flex items-center justify-center'>
       <div className='bg-zinc-400 max-w-md w-full p-10 rounded-md'>
         {signinErrors.map((error,i) => (
-                <div className='bg-red-500 p2 text-white text-center my-2' key= {i}>
-                    {error}
-                </div>
+          <div className='bg-red-500 p2 text-white text-center my-2' key= {i}>
+            {error}
+          </div>
           ))}
 
         <h1 className='text-2xl font-bold'>LOGIN</h1>
@@ -46,13 +46,14 @@ const {
                 )
             }
 
-            <button type='submit'>
+            <button type='onSubmit'>
                 Login
             </button>
 
         </form>
         <p className="flex gap-x-2 justify-between">
-          Don't have an account? <Link to="/register" className="text-sky-900">Sign up</Link>
+          Don't have an account? 
+          <Link to="/register" className="text-sky-900">Sign up</Link>
         </p>
           
       </div>

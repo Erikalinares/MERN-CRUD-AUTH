@@ -45,18 +45,22 @@ export default TaskFormPage*/
 
 import { useForm } from 'react-hook-form';
 import { useTasks } from '../context/TaskContext.jsx';
+import { useNavigate } from 'react-router-dom';
 
 function TaskFormPage() {
   const { register, handleSubmit } = useForm();
   const { createTask } = useTasks();
+  const navigate = useNavigate ();
 
   const onSubmit = handleSubmit(async (data) => {
     try {
       await createTask({
         title: data.title,
         description: data.description,
+        
         // Puedes agregar otros campos necesarios aquí
       });
+      navigate('/tasks')
       // Redirige o realiza cualquier otra acción después de crear la tarea
     } catch (error) {
       console.error(error);

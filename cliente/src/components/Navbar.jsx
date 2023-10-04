@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/authContext';
 
@@ -14,8 +13,8 @@ function Navbar() {
         </Link>
         <ul className='flex gap-x-2'>
             { isAuthenticated ? (
-            <>
-                <li>
+              <>
+                <li className='text-5xl font-bold '>
                     Welcome {user.username}
                 </li>
                 <li>
@@ -23,24 +22,23 @@ function Navbar() {
                 </li>
 
                 <li>
-                    <Link to='/' onClick={() => logout()}>Logout</Link>
+                    <Link to='/' onClick={() => logout()} className='bg-indigo-500 px-5 py-2 rounded-sm'>Logout </Link>
                 </li>
 
-            </>
+              </>
 
             ) : (
             <>
                 <li>
                     <Link to='/login' className='bg-indigo-500 px-5 py-2 rounded-sm'>
-                        
-                     Login</Link>
+                      Login</Link>
                 </li>
                  <li>
-                    <Link to='/register'  className='bg-indigo-500 px-5 py-2 rounded-sm'>Register</Link>
+                    <Link to='/register'  className='bg-indigo-500 px-5 py-2 rounded-sm'>
+                      Register</Link>
                 </li>
 
             </>
-
             )}
         </ul>
     </nav>
