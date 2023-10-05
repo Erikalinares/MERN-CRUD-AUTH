@@ -29,7 +29,7 @@ export const AuthProvider = ({children}) => {
       }
     };
     
-    const signin = async (user) => {
+    /*const signin = async (user) => {
       try {
             const res = await loginRequest(user);
             console.log(res)
@@ -41,7 +41,19 @@ export const AuthProvider = ({children}) => {
         }
        setErrors([error.response.data]) 
       }
-    };
+    };*/
+
+    const signin = async (user) => {
+        try {
+          const res = await loginRequest(user);
+          setUser(res.data);
+          setisAuthenticated(true);
+        } catch (error) {
+          console.log(error);
+          // setErrors(error.response.data.message);
+        }
+      };
+    
 
     const logout = () => {
         Cookies.remove("token");

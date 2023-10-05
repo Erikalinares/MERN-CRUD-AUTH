@@ -20,7 +20,8 @@ function App() {
       <TaskProvider>
         <BrowserRouter>
           <Navbar />
-      <Routes>
+        <main className='container mx-auto px-10'>
+        <Routes>
         <Route path = '/' element= {<HomePage/>} /> //publica 
         <Route path = '/login' element= {<LoginPage/>} /> //publica 
         <Route path = '/register' element= {<RegisterPage/>} /> //publica 
@@ -32,6 +33,7 @@ function App() {
           <Route path = '/profile' element= {<ProfilePage/>} /> //usuario logueado
         </Route>
       </Routes>
+        </main>
         </BrowserRouter>
     </TaskProvider> 
     </AuthProvider>
