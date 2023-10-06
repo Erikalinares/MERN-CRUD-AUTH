@@ -2,6 +2,7 @@ import {useForm} from 'react-hook-form';
 import { useAuth } from '../context/authContext';
 import { useEffect } from 'react';
 import { useNavigate, Link  } from 'react-router-dom';
+import ReCAPTCHA from "react-google-recaptcha";
 
 
 function RegisterPage() {
@@ -11,15 +12,19 @@ function RegisterPage() {
         formState: { errors},
     }  = useForm ();
     const { signup, isAuthenticated, errors: registerErrors} = useAuth();
-    const navigate = useNavigate()
+    const navigate = useNavigate()  
 
     useEffect(() => {
-        if(isAuthenticated) navigate('/tasks'); 
+     if(isAuthenticated) navigate('/tasks'); 
     },[isAuthenticated])
 
     const onSubmit = handleSubmit(async (values) => {
         signup(values);
     });
+
+    const onChange = () => {
+        console.log("Captcha value:", value);
+    }
 
   return (
     <div className='h-[calc(100vh-100px)] flex items-center justify-center'>
@@ -33,6 +38,7 @@ function RegisterPage() {
         }
 
         <form onSubmit={onSubmit}>
+            <h1 className='text-2xl font-bold'>Registro de usuario</h1>
             <input type="text" {...register ('username', {required: true})}
                 className='w-full bg-zinc-300 text-white px 4 py-2 rounded-md my-2'
                 placeholder='Username'/>
@@ -57,6 +63,10 @@ function RegisterPage() {
                     <p className='text-red-500'>Password is required</p>
                 )
             }
+                <ReCAPTCHA
+                    sitekey="6Lc2PH4oAAAAAIAykqGpN7hJ_0LkyKf1AIbQm-HX"
+                    onChange={onChange}
+                />
 
             <button type='submit'>
                 Register
