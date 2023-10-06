@@ -50,11 +50,11 @@ import { useEffect } from 'react';
 
 function TaskFormPage() {
   const { register, handleSubmit, setValue } = useForm();
-  const { createTask, getTask, updateTask} = useTasks();
-  const navigate = useNavigate ();
-  const params = useParams()
+  const { createTask, getTask, updateTask } = useTasks();
+  const navigate = useNavigate();
+  const params = useParams();
 
-  useEffect(() =>{
+  useEffect(() => {
     async function loadTask() {
       if (params.id) {
         const task = await getTask(params.id)
@@ -64,9 +64,9 @@ function TaskFormPage() {
       }
     }
     loadTask();
-  },[])
+  }, [])
 
-  const onSubmit = handleSubmit(async (data) => {
+  /*const onSubmit = handleSubmit(async (data) => {
     try {
       
       await createTask({
@@ -80,9 +80,19 @@ function TaskFormPage() {
     } catch (error) {
       console.error(error);
     }
-  });
+  });*/
 
- 
+  const onSubmit = handleSubmit((data) => {
+    if (params.id) {
+        updateTask(params.id, data)
+
+    } else {
+      createTask(data);
+
+    }
+    navigate('/tasks');
+
+  });
 
   return (
     <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
